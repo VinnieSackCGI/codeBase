@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.props" Condition="Exists('..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.props')" />
+  <Import Project="..\packages\ILMerge.3.0.41\build\ILMerge.props" Condition="Exists('..\packages\ILMerge.3.0.41\build\ILMerge.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47D0A897-366D-4EAA-9532-B8631AB015BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EXConnect_Plugins</RootNamespace>
+    <AssemblyName>EXConnect_Plugins</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Desktop|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Desktop\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DESKTOP</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UnitTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnitTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;UNITTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>EXConnect.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.3.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.3.3.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.3.0\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.59\lib\net462\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.59\lib\net462\Microsoft.Xrm.Sdk.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.Workflow.9.0.2.59\lib\net462\Microsoft.Xrm.Sdk.Workflow.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Http, Version=4.10.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceModel.Http.4.10.3\lib\net461\System.ServiceModel.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Primitives, Version=4.10.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceModel.Primitives.4.10.3\lib\net461\System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.5\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\ConfigurationData.cs" />
+    <Compile Include="Entities\Adapters\AllotmentAdapter.cs" />
+    <Compile Include="Entities\Adapters\AppropriationAdapter.cs" />
+    <Compile Include="Entities\Adapters\AppropriationYearlyRollupAdapter.cs" />
+    <Compile Include="Entities\Adapters\CARTtransactionAdapter.cs" />
+    <Compile Include="Entities\Adapters\CARTuserRoleAdapter.cs" />
+    <Compile Include="Entities\Adapters\CUFFaccountAdapter.cs" />
+    <Compile Include="Entities\Adapters\DivisionAdapter.cs" />
+    <Compile Include="Entities\Adapters\EnvironmentVariablesAdapter.cs" />
+    <Compile Include="Entities\Adapters\FundingSourceAdapter.cs" />
+    <Compile Include="Entities\Adapters\FundingTypeAdaper.cs" />
+    <Compile Include="Entities\Adapters\GFMSdocumentAdapter.cs" />
+    <Compile Include="Entities\Adapters\Interfaces\IGFMSdocumentAdapter.cs" />
+    <Compile Include="Entities\Adapters\Interfaces\IProcessStageAdapters.cs" />
+    <Compile Include="Entities\Adapters\Interfaces\IRecordLockAdapter.cs" />
+    <Compile Include="Entities\Adapters\Interfaces\ITableAdapterInterfaces.cs" />
+    <Compile Include="Entities\Adapters\Interfaces\ITransactionRollupAdapters.cs" />
+    <Compile Include="Entities\Adapters\Interfaces\QuotaSheetAdaptersInterfaces.cs" />
+    <Compile Include="Entities\Adapters\NeighborhoodAdapter.cs" />
+    <Compile Include="Entities\Adapters\ObligationTypeAdapter.cs" />
+    <Compile Include="Entities\Adapters\PostAdapter.cs" />
+    <Compile Include="Entities\Adapters\ProcessStageAdapter.cs" />
+    <Compile Include="Entities\Adapters\ProgramAdapter.cs" />
+    <Compile Include="Entities\Adapters\QuotaSheetAccountMapAdapter.cs" />
+    <Compile Include="Entities\Adapters\QuotaSheetFrontOfficeAdapter.cs" />
+    <Compile Include="Entities\Adapters\QuotaSheetHeaderAdapter.cs" />
+    <Compile Include="Entities\Adapters\QuotaSheetRegionalAdapter.cs" />
+    <Compile Include="Entities\Adapters\RecordLockAdapter.cs" />
+    <Compile Include="Entities\Adapters\SpendPlanRequestAdapter.cs" />
+    <Compile Include="Entities\Adapters\StagedBulkUploadRecordAdapter.cs" />
+    <Compile Include="Entities\Adapters\SubProgram.cs" />
+    <Compile Include="Entities\Adapters\SystemUserAdapter.cs" />
+    <Compile Include="Entities\Adapters\TeamAdapter.cs" />
+    <Compile Include="Entities\Adapters\TemplatesAdapter.cs" />
+    <Compile Include="Entities\Adapters\TransactionMonthlyRollupAdapter.cs" />
+    <Compile Include="Entities\Adapters\TransactionYearlyRollupAdapter.cs" />
+    <Compile Include="Entities\Adapters\WorkflowAdapters.cs" />
+    <Compile Include="Entities\eca_Allotment.cs" />
+    <Compile Include="Entities\eca_Division.cs" />
+    <Compile Include="Entities\eca_documentworkflow.cs" />
+    <Compile Include="Entities\eca_FormulationRequest.cs" />
+    <Compile Include="Entities\eca_FrontOfficeQuotaSheet.cs" />
+    <Compile Include="Entities\eca_FunctionCode.cs" />
+    <Compile Include="Entities\eca_FundingSource.cs" />
+    <Compile Include="Entities\eca_FundingType.cs" />
+    <Compile Include="Entities\eca_GFMSDocument.cs" />
+    <Compile Include="Entities\eca_Neighborhood.cs" />
+    <Compile Include="Entities\eca_ObligationTypes.cs" />
+    <Compile Include="Entities\eca_Program.cs" />
+    <Compile Include="Entities\eca_QuotaSheetHeader.cs" />
+    <Compile Include="Entities\eca_QuotaSheetRegionalData.cs" />
+    <Compile Include="Entities\eca_QuotaSheetToCUFFAccountMap.cs" />
+    <Compile Include="Entities\eca_RegionalQuotaSheets.cs" />
+    <Compile Include="Entities\eca_RollupRecordLock.cs" />
+    <Compile Include="Entities\eca_StagedBulkUploadRecords.cs" />
+    <Compile Include="Entities\eca_Subprogram.cs" />
+    <Compile Include="Entities\eca_transactionworkflow.cs" />
+    <Compile Include="Entities\EnvironmentVariableDefinition.cs" />
+    <Compile Include="Entities\EnvironmentVariableValue.cs" />
+    <Compile Include="Entities\EXConnect_ServiceContext.cs" />
+    <Compile Include="Entities\Extensions\AppropriationRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\AppropriationYearlyRollupRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\CARTtransactionRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\CARTuserRolesRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\CUFFaccountRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\DivisionRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\eca_documentworkflowRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\eca_transactionworkflowRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\FundingSourceRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\FundingTypeRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\GFMSdocumentRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\NeighborhoodRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\ObligationTypeRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\PostRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\ProcessStageRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\ProgramRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\QuotaSheetFrontOfficeRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\QuotaSheetHeaderRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\QuotaSheetRegionalRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\SpendPlanRequestRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\StagedBulkUploadRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\SubProgramRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\TeamRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\TemplatesRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\TransactionMonthlyRollupRecordExtension.cs" />
+    <Compile Include="Entities\Extensions\TransactionYearlyRollupRecordExtension.cs" />
+    <Compile Include="Entities\Interfaces\IAppropriationYearlyRollupRecord.cs" />
+    <Compile Include="Entities\Interfaces\ICARTtransactionRecord.cs" />
+    <Compile Include="Entities\Interfaces\ICARTuserRoleRecord.cs" />
+    <Compile Include="Entities\Interfaces\ICUFFaccountRecord.cs" />
+    <Compile Include="Entities\Interfaces\IGFMSdocument.cs" />
+    <Compile Include="Entities\Interfaces\IProcessStageRecord.cs" />
+    <Compile Include="Entities\Interfaces\IReferenceTablesRecords.cs" />
+    <Compile Include="Entities\Interfaces\IRepository.cs" />
+    <Compile Include="Entities\Interfaces\ISpendPlanRequestRecord.cs" />
+    <Compile Include="Entities\Interfaces\IStagedBulkUploadRecord.cs" />
+    <Compile Include="Entities\Interfaces\ITemplateRecord.cs" />
+    <Compile Include="Entities\Interfaces\ITransactionRollupRecords.cs" />
+    <Compile Include="Entities\Interfaces\IWorkflowRecord.cs" />
+    <Compile Include="Entities\Interfaces\QuotaSheetInterfaces.cs" />
+    <Compile Include="Entities\OptionSets.cs" />
+    <Compile Include="Entities\ProcessStage.cs" />
+    <Compile Include="Entities\rcade_Appropriation.cs" />
+    <Compile Include="Entities\rcade_AppropriationYearlyRollup.cs" />
+    <Compile Include="Entities\rcade_CARTTemplates.cs" />
+    <Compile Include="Entities\rcade_CARTTransaction.cs" />
+    <Compile Include="Entities\rcade_CARTUserRoles.cs" />
+    <Compile Include="Entities\rcade_creditcard.cs" />
+    <Compile Include="Entities\rcade_CUFFAccount.cs" />
+    <Compile Include="Entities\rcade_MonthlyRollupForAppAccAssocs.cs" />
+    <Compile Include="Entities\rcade_Post.cs" />
+    <Compile Include="Entities\rcade_StatusFlow.cs" />
+    <Compile Include="Entities\rcade_UserRoleAssociations.cs" />
+    <Compile Include="Entities\rcade_YearlyRollupForAppAccAssocs.cs" />
+    <Compile Include="Entities\SystemUser.cs" />
+    <Compile Include="Entities\Team.cs" />
+    <Compile Include="Extensions\ExcelCellExtensions.cs" />
+    <Compile Include="Extensions\OpenXMLExtensions.cs" />
+    <Compile Include="Plugin Handling\MainCodeActivity.cs" />
+    <Compile Include="Plugin Handling\MainPlugin.cs" />
+    <Compile Include="Plugin Handling\Services\BusinessDbService.cs" />
+    <Compile Include="Plugin Handling\Services\ProcessStages.cs" />
+    <Compile Include="Plugins\AccountAppropriationtAssociationPlugin.cs" />
+    <Compile Include="Plugins\AppropriationAccountAssociationPlugin.cs" />
+    <Compile Include="Plugins\Bulk Upload &amp; Templates\MoveFromStagedToCorrespondingTablePlugin.cs" />
+    <Compile Include="Plugins\Bulk Upload &amp; Templates\StagedBulkUploadRecordValidationPlugin.cs" />
+    <Compile Include="Plugins\Bulk Upload &amp; Templates\TemplateUpdateOnCUFFaccountChangePlugin.cs" />
+    <Compile Include="Plugins\Bulk Upload &amp; Templates\TemplateUpdateOnFundingSourceAppropriationChangePlugin.cs" />
+    <Compile Include="Plugins\Code Activities\GetFiscalDateInfoCodeActivity.cs" />
+    <Compile Include="Plugins\Code Activities\ProcessExcelQuotaSheetCodeActivity.cs" />
+    <Compile Include="Plugins\Code Activities\ProcessDataRecordFromExcelTemplateRowCodeActivity.cs" />
+    <Compile Include="Plugins\Code Activities\UpdateExcelTemplateRefTablesCodeActivity.cs" />
+    <Compile Include="Plugins\Common\BulkUpload.cs" />
+    <Compile Include="Plugins\Common\BusinessProcessFlow.cs" />
+    <Compile Include="Plugins\Common\DocumentNumberGeneration.cs" />
+    <Compile Include="Plugins\Common\QuotaSheetsParsing.cs" />
+    <Compile Include="Plugins\Common\RecordValidators.cs" />
+    <Compile Include="Plugins\GFMSdocumentPackageStatusSyncPlugin.cs" />
+    <Compile Include="Plugins\Rollups\ApproppriationYearlyRollupAllocationPlugin.cs" />
+    <Compile Include="Plugins\Rollups\MonthlyTransactionRollupPlugin.cs" />
+    <Compile Include="Plugins\Rollups\RecalculateYearlyRollupFieldsPlugin.cs" />
+    <Compile Include="Plugins\Rollups\YearlyTransactionRollupPlugin.cs" />
+    <Compile Include="Plugins\SetCRFactor.cs" />
+    <Compile Include="Plugins\SpendingTransactionValidationPlugin.cs" />
+    <Compile Include="Plugins\TransactionStageSyncPlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bin\coretools\CrmSvcUtil.exe.config" />
+    <None Include="bin\coretools\LicenseTerms.docx" />
+    <None Include="bin\coretools\pacTelemetryUpload.exe.config" />
+    <None Include="bin\coretools\SolutionPackager.exe.config" />
+    <None Include="EXConnect.snk" />
+    <None Include="ILMerge.props" />
+    <None Include="packages.config" />
+    <None Include="Plugins\packages.config" />
+    <None Include="spkl.json" />
+    <None Include="spkl\deploy-plugins.bat" />
+    <None Include="spkl\deploy-webresources.bat" />
+    <None Include="spkl\deploy-workflows.bat" />
+    <None Include="spkl\download-webresources.bat" />
+    <None Include="spkl\earlybound.bat" />
+    <None Include="spkl\instrument-plugin-code.bat" />
+    <None Include="spkl\pack+import.bat" />
+    <None Include="spkl\spkl\deploy-plugins-debug.bat" />
+    <None Include="spkl\spkl\deploy-plugins.bat" />
+    <None Include="spkl\spkl\deploy-webresources.bat" />
+    <None Include="spkl\spkl\deploy-workflows.bat" />
+    <None Include="spkl\spkl\download-webresources.bat" />
+    <None Include="spkl\spkl\earlybound.bat" />
+    <None Include="spkl\spkl\instrument-plugin-code.bat" />
+    <None Include="spkl\spkl\pack+import.bat" />
+    <None Include="spkl\spkl\unpack.bat" />
+    <None Include="spkl\unpack.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\coretools\CrmSvcUtil.exe" />
+    <Content Include="bin\coretools\CrmSvcUtil.xml" />
+    <Content Include="bin\coretools\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\coretools\Microsoft.Crm.Sdk.Proxy.dll" />
+    <Content Include="bin\coretools\Microsoft.Deployment.Compression.Cab.dll" />
+    <Content Include="bin\coretools\Microsoft.Deployment.Compression.dll" />
+    <Content Include="bin\coretools\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" />
+    <Content Include="bin\coretools\Microsoft.PowerPlatform.Tooling.BatchedTelemetry.dll" />
+    <Content Include="bin\coretools\Microsoft.Rest.ClientRuntime.dll" />
+    <Content Include="bin\coretools\Microsoft.Xrm.Sdk.Deployment.dll" />
+    <Content Include="bin\coretools\Microsoft.Xrm.Sdk.dll" />
+    <Content Include="bin\coretools\Microsoft.Xrm.Tooling.Connector.dll" />
+    <Content Include="bin\coretools\Microsoft.Xrm.Tooling.CrmConnectControl.dll" />
+    <Content Include="bin\coretools\Microsoft.Xrm.Tooling.Ui.Styles.dll" />
+    <Content Include="bin\coretools\Newtonsoft.Json.dll" />
+    <Content Include="bin\coretools\Other Redistributable.txt" />
+    <Content Include="bin\coretools\pacTelemetryUpload.exe" />
+    <Content Include="bin\coretools\SolutionPackager.exe" />
+    <Content Include="bin\coretools\SolutionPackagerLib.dll" />
+    <Content Include="bin\coretools\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\coretools\System.Memory.dll" />
+    <Content Include="bin\coretools\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\coretools\System.Text.Json.dll" />
+    <Content Include="bin\coretools\System.ValueTuple.dll" />
+    <Content Include="ILMergeOrder.txt" />
+    <Content Include="spkl\spkl\Log1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="..\Plugins Common Library\PluginsCommonLibrary.projitems" Label="Shared" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\ILMerge.3.0.41\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILMerge.3.0.41\build\ILMerge.props'))" />
+    <Error Condition="!Exists('..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.props'))" />
+    <Error Condition="!Exists('..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.targets" Condition="('$(Configuration)'=='Release') AND Exists('..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.targets')" />
+</Project>
