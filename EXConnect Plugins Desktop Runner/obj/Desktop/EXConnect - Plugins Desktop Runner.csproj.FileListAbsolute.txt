@@ -1,0 +1,2 @@
+C:\Users\HuynhJ\source\repos\EXConnect Plugins Solution\EXConnect Plugins Desktop Runner\obj\Desktop\EXConnect - Plugins Desktop Runner.csproj.AssemblyReference.cache
+C:\Users\HuynhJ\source\repos\EXConnect Plugins Solution\EXConnect Plugins Desktop Runner\obj\Desktop\EXConnect - Plugins Desktop Runner.csproj.CoreCompileInputs.cache
