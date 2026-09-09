@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>bb2c9e5d-e214-4439-b810-8e2680280e65</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Plugins_CommonLibrary</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Adapters\ITableAdapterInterfaces.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Interfaces\ITableRecord.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Interfaces\ITeamRecord.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\DocumentNumberExistsException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\EntityModifiedOrCreatedByOtherResourceSinceLastRetrievalException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\GeneralException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DateTimeExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DecimalExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\EntityCollectionExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\EntityExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\PluginExecutionContextExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\OptionSetCollectionExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\OrganizationServiceExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\QueryExpressionExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\TracingStopWatch.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\UriExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\FieldMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Guard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)interfaces\IFileData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plugin Handling\BaseCodeActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plugin Handling\BasePlugin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plugin Handling\CrmPluginRegistrationAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plugin Handling\EntityTrace.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plugin Handling\Extensions\RegisteredEventExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Interfaces\IBaseRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plugin Handling\Interfaces\IExtendedPluginContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plugin Handling\Interfaces\IPluginHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plugin Handling\PluginContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plugin Handling\RegisteredEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Services\BaseBusinessDbService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\FileContents.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\WebAPIService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Entities\Interfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
+  </ItemGroup>
+</Project>
