@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal Plugins", "Portal Plugins\Portal Plugins.csproj", "{E4854A1A-4305-4A99-9AD5-B7B619319C20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal - Plugins Desktop Runner", "Portal Plugins Desktop Runner\Portal - Plugins Desktop Runner.csproj", "{695BDE79-00A6-4188-AB3A-370CBEA30F09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EXConnect Plugins", "EXConnect Plugins\EXConnect Plugins.csproj", "{47D0A897-366D-4EAA-9532-B8631AB015BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EXConnect - Plugins Desktop Runner", "EXConnect Plugins Desktop Runner\EXConnect - Plugins Desktop Runner.csproj", "{662E6CF7-4F67-498C-B93A-5C75271AF6FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8CC9A384-AE0A-4D8C-BF92-768639523793}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Plugins Common Library", "Plugins Common Library\Plugins Common Library.shproj", "{BB2C9E5D-E214-4439-B810-8E2680280E65}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RunnerCommonLibrary", "Runner Common Library\RunnerCommonLibrary.shproj", "{3DC806BF-F76D-4DDA-B477-1D6DF5B4E857}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Desktop|Any CPU = Desktop|Any CPU
+		Release|Any CPU = Release|Any CPU
+		UnitTest|Any CPU = UnitTest|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4854A1A-4305-4A99-9AD5-B7B619319C20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4854A1A-4305-4A99-9AD5-B7B619319C20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4854A1A-4305-4A99-9AD5-B7B619319C20}.Desktop|Any CPU.ActiveCfg = Desktop|Any CPU
+		{E4854A1A-4305-4A99-9AD5-B7B619319C20}.Desktop|Any CPU.Build.0 = Desktop|Any CPU
+		{E4854A1A-4305-4A99-9AD5-B7B619319C20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4854A1A-4305-4A99-9AD5-B7B619319C20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4854A1A-4305-4A99-9AD5-B7B619319C20}.UnitTest|Any CPU.ActiveCfg = UnitTest|Any CPU
+		{E4854A1A-4305-4A99-9AD5-B7B619319C20}.UnitTest|Any CPU.Build.0 = UnitTest|Any CPU
+		{695BDE79-00A6-4188-AB3A-370CBEA30F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{695BDE79-00A6-4188-AB3A-370CBEA30F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{695BDE79-00A6-4188-AB3A-370CBEA30F09}.Desktop|Any CPU.ActiveCfg = Desktop|Any CPU
+		{695BDE79-00A6-4188-AB3A-370CBEA30F09}.Desktop|Any CPU.Build.0 = Desktop|Any CPU
+		{695BDE79-00A6-4188-AB3A-370CBEA30F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{695BDE79-00A6-4188-AB3A-370CBEA30F09}.UnitTest|Any CPU.ActiveCfg = UnitTest|Any CPU
+		{47D0A897-366D-4EAA-9532-B8631AB015BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47D0A897-366D-4EAA-9532-B8631AB015BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47D0A897-366D-4EAA-9532-B8631AB015BC}.Desktop|Any CPU.ActiveCfg = Desktop|Any CPU
+		{47D0A897-366D-4EAA-9532-B8631AB015BC}.Desktop|Any CPU.Build.0 = Desktop|Any CPU
+		{47D0A897-366D-4EAA-9532-B8631AB015BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47D0A897-366D-4EAA-9532-B8631AB015BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47D0A897-366D-4EAA-9532-B8631AB015BC}.UnitTest|Any CPU.ActiveCfg = UnitTest|Any CPU
+		{47D0A897-366D-4EAA-9532-B8631AB015BC}.UnitTest|Any CPU.Build.0 = UnitTest|Any CPU
+		{662E6CF7-4F67-498C-B93A-5C75271AF6FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{662E6CF7-4F67-498C-B93A-5C75271AF6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{662E6CF7-4F67-498C-B93A-5C75271AF6FC}.Desktop|Any CPU.ActiveCfg = Desktop|Any CPU
+		{662E6CF7-4F67-498C-B93A-5C75271AF6FC}.Desktop|Any CPU.Build.0 = Desktop|Any CPU
+		{662E6CF7-4F67-498C-B93A-5C75271AF6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{662E6CF7-4F67-498C-B93A-5C75271AF6FC}.UnitTest|Any CPU.ActiveCfg = UnitTest|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Runner Common Library\RunnerCommonLibrary.projitems*{3dc806bf-f76d-4dda-b477-1d6df5b4e857}*SharedItemsImports = 13
+		Plugins Common Library\PluginsCommonLibrary.projitems*{47d0a897-366d-4eaa-9532-b8631ab015bc}*SharedItemsImports = 4
+		Runner Common Library\RunnerCommonLibrary.projitems*{662e6cf7-4f67-498c-b93a-5c75271af6fc}*SharedItemsImports = 4
+		Runner Common Library\RunnerCommonLibrary.projitems*{695bde79-00a6-4188-ab3a-370cbea30f09}*SharedItemsImports = 4
+		Plugins Common Library\PluginsCommonLibrary.projitems*{bb2c9e5d-e214-4439-b810-8e2680280e65}*SharedItemsImports = 13
+		Plugins Common Library\PluginsCommonLibrary.projitems*{e4854a1a-4305-4a99-9ad5-b7b619319c20}*SharedItemsImports = 4
+	EndGlobalSection
+EndGlobal
