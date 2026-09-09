@@ -1,0 +1,14 @@
+EXConnect_Plugins.dll
+DocumentFormat.OpenXml.dll
+DocumentFormat.OpenXml.Framework.dll
+Microsoft.Bcl.AsyncInterfaces.dll
+Newtonsoft.Json.dll
+System.Buffers.dll
+System.Memory.dll
+System.Numerics.Vectors.dll
+System.ServiceModel.Http.dll
+System.ServiceModel.Primitives.dll
+System.Text.Encodings.Web.dll
+System.Text.Json.dll
+System.Threading.Tasks.Extensions.dll
+System.ValueTuple.dll

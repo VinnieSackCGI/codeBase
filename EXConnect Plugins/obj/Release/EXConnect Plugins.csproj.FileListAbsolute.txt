@@ -1,0 +1,4 @@
+C:\Users\HuynhJ\source\repos\EXConnect Plugins Solution\EXConnect Plugins\obj\Release\EXConnect Plugins.csproj.AssemblyReference.cache
+C:\Users\HuynhJ\source\repos\EXConnect Plugins Solution\EXConnect Plugins\obj\Release\EXConnect Plugins.csproj.CoreCompileInputs.cache
+C:\Users\HuynhJ\source\repos\EXConnect Plugins Solution\EXConnect Plugins\obj\Release\EXConnect_Plugins.dll
+C:\Users\HuynhJ\source\repos\EXConnect Plugins Solution\EXConnect Plugins\obj\Release\EXConnect_Plugins.pdb
