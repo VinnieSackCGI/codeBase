@@ -2,3 +2,7 @@ C:\Users\HuynhJ\source\repos\EXConnect Plugins Solution\Portal Plugins\obj\Relea
 C:\Users\HuynhJ\source\repos\EXConnect Plugins Solution\Portal Plugins\obj\Release\Portal Plugins.csproj.CoreCompileInputs.cache
 C:\Users\HuynhJ\source\repos\EXConnect Plugins Solution\Portal Plugins\obj\Release\Portal_Plugins.dll
 C:\Users\HuynhJ\source\repos\EXConnect Plugins Solution\Portal Plugins\obj\Release\Portal_Plugins.pdb
+C:\Users\VSACK\source\repos\VinnieSackCGI\codeBase\Portal Plugins\obj\Release\Portal Plugins.csproj.AssemblyReference.cache
+C:\Users\VSACK\source\repos\VinnieSackCGI\codeBase\Portal Plugins\obj\Release\Portal Plugins.csproj.CoreCompileInputs.cache
+C:\Users\VSACK\source\repos\VinnieSackCGI\codeBase\Portal Plugins\obj\Release\Portal_Plugins.dll
+C:\Users\VSACK\source\repos\VinnieSackCGI\codeBase\Portal Plugins\obj\Release\Portal_Plugins.pdb
